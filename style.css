@@ -1,4 +1,29 @@
+:root {
+    --display: flex;
+}
+
 h1 {
     color: blue;
     font-size: large;
+}
+
+#menu {
+    display: flex;
+    justify-content: center; 
+    width: 200px;
+    border-style: solid;
+}
+
+
+#drop-down-items li {
+    display: var(--display);
+    list-style-type: none;
+    color: red;
+    border: 1pt;
+    border-color: black;
+    border-style: solid;
+    padding: 5pt;
+    width: 200px;
+    justify-content: center;
+    justify-items: center;
 }
