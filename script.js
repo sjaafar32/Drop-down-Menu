@@ -1,6 +1,15 @@
 const dropDownItems = document.getElementById('drop-down-items');
 const menu = document.getElementById('menu');
 
-menu.addEventListener('click', () => {
-    document.documentElement.style.setProperty('--display', 'none');
-})
+dropDownFunction(dropDownItems);
+
+function dropDownFunction(element) {
+element.addEventListener('mouseover', () => {
+    document.documentElement.style.setProperty('--display', 'flex');
+});
+
+element.addEventListener('mouseout', () => {
+    document.documentElement.style.setProperty('--display', 'none')
+});
+
+}
