@@ -1,15 +1,21 @@
-const dropDownItems = document.getElementById('drop-down-items');
-const menu = document.getElementById('menu');
+const menuDropDownItems = document.getElementsByClassName('drop-down-items')[0];
+const aboutDropDownItems = document.getElementsByClassName('drop-down-items')[1];
+const menuDropDownDiv = document.getElementsByClassName('appear-disappear')[0];
+const aboutDropDownDiv = document.getElementsByClassName('appear-disappear')[1];
 
-dropDownFunction(dropDownItems);
+visibleHide(menuDropDownDiv, menuDropDownItems);
+visibleHide(aboutDropDownDiv, aboutDropDownItems);
 
-function dropDownFunction(element) {
+
+function visibleHide(element, dropDownItems) {
+    dropDownItems.style.display = 'none';
+
 element.addEventListener('mouseover', () => {
-    document.documentElement.style.setProperty('--display', 'flex');
+    dropDownItems.style.display = 'block';
 });
 
 element.addEventListener('mouseout', () => {
-    document.documentElement.style.setProperty('--display', 'none')
+    dropDownItems.style.display = 'none';
 });
 
 }
